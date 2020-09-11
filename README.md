@@ -1,4 +1,4 @@
-# :🇬🇧: About the project (Tobias) 
+# About the project (Tobias) :🇬🇧:
 -It is a rewrite of tobias with a hybrid system of classes with pattern design.
 
 ## Created with love for you
@@ -25,7 +25,7 @@
 
 ### Be Happy
 
-# :🇧🇷: Sobre o Projeto (Tobias)
+# Sobre o Projeto (Tobias) :🇧🇷:
 -É um rework do Tobias com um sistema hibrido entre classes e desing pattern.
 
 ## Criado com amor para vocês
