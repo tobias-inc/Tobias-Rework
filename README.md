@@ -25,6 +25,9 @@
 
 ### Be Happy
 
+> Project Status: Development :warning:
+
+
 # Sobre o Projeto (Tobias) :🇧🇷:
 -É um rework do Tobias com um sistema hibrido entre classes e desing pattern.
 
@@ -51,3 +54,5 @@
 - Então use yarn install ou npm install 
 
 ### Aproveite o Bot 
+
+> Status do Projeto: Em desenvolvimento :warning:
