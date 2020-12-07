@@ -35,7 +35,7 @@ module.exports = class MessageResponse {
 
     if (message.content === `<@${this.client.user.id}>` || message.content === `<@!${this.client.user.id}>`) {
       return message.channel.send(
-        new TobiasEmbed(message.author)
+        new TobiasEmbed(message.author, this.client)
           .setDescription(`${Emojis.Certo} **${message.author.username}**, ${this.client.language.i18next.getFixedT(language)('client:mentionBot', { prefix: Constants.DEFAULT_PREFIX })}`)
       ).catch(() => { })
     }

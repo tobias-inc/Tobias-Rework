@@ -17,7 +17,7 @@ module.exports = class Avatar extends Command {
     }
 
     async run({ channel, author }, user = author) {
-        const embed = new TobiasEmbed(author, {
+        const embed = new TobiasEmbed(author, this.client, {
             thumbnail: user.displayAvatarURL()
           })
         return channel.send(`\`${user.tag}\``, embed.setImage(user.displayAvatarURL({ dynamic: true})))

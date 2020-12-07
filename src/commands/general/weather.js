@@ -20,7 +20,7 @@ module.exports = class Weather extends Command {
     }
 
     async run({ t, author, channel, language: lang }, city) {
-        const embed = new TobiasEmbed(author)
+        const embed = new TobiasEmbed(author, this.client)
         const [cityWeather] = await this.client.apis.weather.searchLocale(city, {
             lang,
             degreeType: 'C'

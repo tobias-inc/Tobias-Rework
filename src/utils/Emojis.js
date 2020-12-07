@@ -25,6 +25,10 @@ module.exports = {
     Dnd: '<:b_dnd:438399396548313091>',
     Online: '<:b_online:438399398808911882>',
     Streaming: '<:b_stream:438399396963418131>',
+    //FLAGS
+    BR: '🇧🇷',
+    US: '🇺🇸',
+    ES: '🇪🇸',
     // REACTIONS
     reactions: {
         wait: '547392151043178506',

@@ -18,7 +18,7 @@ module.exports = class DragRacing extends Command {
     const corrida = Açoes[Math.round(Math.random() * Açoes.length)]
     const corrida2 = Açoes[Math.round(Math.random() * Açoes.length)]
 
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
 
     let winner
 

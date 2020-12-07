@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Constants = require('../../../utils/Constants.js')
+const Constants = require('../../utils/Constants.js')
 
 const vipTypes = ['dbl', 'bpd']
 
@@ -38,7 +38,7 @@ const EconomySchema = new Schema({
   rep: { type: Number, default: 0 },
   bank: { type: Number, default: 0 },
   pocket: { type: Number, default: 0 },
-  favColor: { type: String, default: Constants.FAV_COLOR },
+  favColor: { type: String, default: Constants.EMBED_COLOR },
   personalText: { type: String, default: 'Nothing inserted...' },
   background: { type: String, default: Constants.DEFAULT_BACKGROUND },
   guildExperience: [GuildExperienceSchema],

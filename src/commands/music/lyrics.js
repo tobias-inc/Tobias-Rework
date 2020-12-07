@@ -23,20 +23,17 @@ module.exports = class Lyrics extends Command {
   }
 
   async run({ channel, author, t, args }) {
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
 
 
     const search = args.join(' ')
     const AUTHOR = author.presence.activities
     
     function spotify(AUTHOR){
-      try {
         if(AUTHOR[0].name === 'Spotify' && !search){
           return true
         }
-      } catch {
         return false
-      }
     }
     const title = spotify(AUTHOR) ? AUTHOR[0].details : search.split('-')[0] 
     const artist = spotify(AUTHOR) ? AUTHOR[0].state.split(';')[0] : search.split('-')[1] 

@@ -34,7 +34,7 @@ const {
     }
   
     async run ({ t, message, author, channel, guild }, bugReported) {
-      const embed = new TobiasEmbed(author)
+      const embed = new TobiasEmbed(author, this.client)
   
       try {
         const screenShots = await message.attachments.map(e => e.url)

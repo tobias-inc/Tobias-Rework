@@ -1,15 +1,20 @@
-const { Client } = require('discord.js');
+const { Client, Intents } = require('discord.js');
 const { red, blue, magenta } = require('chalk');
 const moment = require('moment')
 const loaders = require('./loaders')
 
 const getDate = () => moment.locale('pt-BR') && moment().format('lll')
 
+
 module.exports = class TobiasClient extends Client {
   constructor() {
     super('tobias');
     this.database = null
     this.language = null
+   /* this.fetchAllMembers = true
+    this.ws = { 
+      intents : Intents.ALL
+    } */
   }
 
   login(token) { 

@@ -18,7 +18,8 @@ module.exports = class Pat extends Command {
 
   async run ({ t, author, channel, userHuged }, user) {
     const hugImage = await this.client.apis.nekos.getImage('pat')
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
+    
       .setImage(hugImage)
       .setDescription(t('commands:pat.successPat', { author: author.tag, user: user.tag  }))
       .setColor(Constants.EMBED_COLOR)

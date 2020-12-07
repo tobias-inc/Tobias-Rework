@@ -10,7 +10,7 @@ module.exports = class Commands extends Command {
   }
 
   run ({ t, channel, author }) {
-    const embed = new TobiasEmbed(author, {
+    const embed = new TobiasEmbed(author, this.client, {
       thumbnail: this.client.user.displayAvatarURL
     })
 

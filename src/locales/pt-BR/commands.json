@@ -1,4 +1,21 @@
 {
+  "language": {
+      "title": "Selecione a lingua",
+      "txt": "Clique nos respectivos emojis para trocar de lingua!",
+      "txt1": "A lingua do bot foi trocada para: ",
+      "error": "O servidor já está configurado na lingua que você escolheu!",
+      "PT": "Caso queira trocar a lingua para português clique em:",
+      "US": "If you want to change the language to english click in:"
+  },
+  "bot": {
+    "ctx": "Um bot simples, mas muito legal, aposto que você vai gostar das minhas funções",
+    "users": "O meu total de usuarios é de :",
+    "guilds": "O meu total de guilds é de:",
+    "languages": "Atualmente eu sei me comunicar em:",
+    "addMe": "Para me adicionar",
+    "voteMe": "Para votar em mim",
+    "click": "[clique aqui]({{LINK}})"
+  },
     "clear": {
       "commandDescription": "Apaga muitas mensagens.",
       "commandUsage": "<number>",
@@ -39,11 +56,11 @@
       "verify": {
         "ctx": "Verificação",
         "level": {
-          "0": "Nenhum **(0)**",
-          "1": "Baixo **(1)**",
-          "2": "Médio **(2)**",
-          "3": "Alto **(3)**",
-          "4": "Muito Alto **(4)**"
+          "NONE": "Nenhum **(0)**",
+          "LOW": "Baixo **(1)**",
+          "MEDIUM": "Médio **(2)**",
+          "HIGH": "Alto **(3)**",
+          "VERY_HIGH": "Muito Alto **(4)**"
         }
       },
       "members": {
@@ -116,7 +133,9 @@
     },
     "say": {
       "commandDescription": "Faz o bot enviar uma mensagem.",
-      "commandUsage": "<mensagem>"
+      "commandUsage": "<mensagem>",
+      "null": "{{Emoji}} Você não escreveu nada ué",
+      "txt": "me pediu para dizer {{argsJunto}}"
     },
     "config": {
       "commandDescription": "Altera a configuração atual do servidor.",

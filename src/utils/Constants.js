@@ -45,6 +45,10 @@ module.exports = {
   Channels: {
     BUG_REPORT: '671400580781965313'
   },
+  BOT_LINKS: {
+    DISCORD_BOTS: 'https://top.gg/bot/539853186572222464',
+    ADD_ME: 'https://discord.com/oauth2/authorize?client_id=539853186572222464&permissions=0&scope=bot'
+  },
 
   // Discord Wrapper
   Errors: {

@@ -28,7 +28,7 @@ module.exports = class ConfigPrefix extends Command {
     }
 
     async run({ t, author, channel, guild }, prefix = Constants.DEFAULT_PREFIX) {
-        const embed = new TobiasEmbed(author)
+        const embed = new TobiasEmbed(author, this.client)
         try {
             await this.client.database.guilds.update(guild.id, { $set: { prefix }}) 
             embed.setTitle(

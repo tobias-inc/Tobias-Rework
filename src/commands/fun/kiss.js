@@ -15,7 +15,8 @@ module.exports = class Kiss extends Command {
 
   async run ({ t, author, channel, userHuged }, user) {
     const hugImage = await this.client.apis.nekos.getImage('kiss')
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
+    
       .setImage(hugImage)
       .setDescription(t('commands:kiss.successKiss', { author: author.tag, user: user.tag }))
       .setColor(Constants.EMBED_COLOR)

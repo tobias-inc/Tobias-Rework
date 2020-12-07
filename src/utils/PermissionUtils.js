@@ -12,7 +12,7 @@ module.exports = class PermissionUtils {
 
   static async specialRole (client, user) {
     const botGuild = await client.guilds.resolve(Constants.BOT_GUILD)
-    const member = await botGuild && botGuild.members.fetch(user.id)
+    const member = await botGuild.members.fetch(user.id)
     if (member) {
       return member.roles
         .filter(r => r.hoist)

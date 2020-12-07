@@ -49,8 +49,8 @@ module.exports = class UserInfo extends Command {
           .addField(t('commands:userinfo.name'), user.tag, true)
           .addField(
             t('commands:userinfo.nickname.ctx'),
-            user.nickname
-              ? user.nickname
+            message.member.nickname
+              ? message.member.nickname
               : t('commands:userinfo.nickname.none'),
             true
           )

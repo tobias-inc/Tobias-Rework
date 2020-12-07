@@ -17,7 +17,7 @@ module.exports = class Slap extends Command {
 
   async run ({ t, author, channel, userHuged }, user) {
     const hugImage = await this.client.apis.nekos.getImage('slap')
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
       .setImage(hugImage)
       .setDescription(t('commands:slap.successSlap', { author: author.tag, user: user.tag }))
       .setColor(Constants.EMBED_COLOR)

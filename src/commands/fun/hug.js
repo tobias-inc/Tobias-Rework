@@ -15,7 +15,7 @@ module.exports = class Hug extends Command {
 
   async run ({ t, author, channel, userHuged }, user) {
     const hugImage = await this.client.apis.nekos.getImage('hug')
-    const embed = new TobiasEmbed(author)
+    const embed = new TobiasEmbed(author, this.client)
 
       .setImage(hugImage)
       .setDescription(t('commands:hug.successHug', { author: author.tag, user: user.tag}))

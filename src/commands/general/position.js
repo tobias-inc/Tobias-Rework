@@ -29,8 +29,8 @@ module.exports = class Posicao extends Command {
         return a.joinedTimestamp - b.joinedTimestamp
       }).map(x => x.user.username)
     })
-    const embed = new TobiasEmbed(author)
-
+    const embed = new TobiasEmbed(author, this.client)
+    
     let inPage = 0
     const pages = body.chunk(10)
 

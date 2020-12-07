@@ -18,7 +18,7 @@ module.exports = class UserRepository extends MongoRepository {
         rep: 0,
         bank: 0,
         pocket: 0,
-        favColor: Constants.FAV_COLOR,
+        favColor: Constants.EMBED_COLOR,
         personalText: Constants.DEFAULT_PERSONAL_TEXT,
         background: Constants.DEFAULT_BACKGROUND,
         guildExperience: [],
