@@ -14,7 +14,7 @@ module.exports = class UserInfo extends Command {
     super(client, path, {
       name: 'userinfo',
       category: 'utility',
-      aliases: ['ui', 'uinfo', 'useri'],
+      aliases: ['ui', 'uinfo', 'useri', 'profile', 'perfil'],
       utils: {
         parameters: [
           {
