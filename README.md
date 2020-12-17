@@ -1,4 +1,7 @@
 # About the project (Tobias)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6f6058f329d4785bee2b1afe6d71336)](https://app.codacy.com/gh/tobias-inc/Tobias-Rework?utm_source=github.com&utm_medium=referral&utm_content=tobias-inc/Tobias-Rework&utm_campaign=Badge_Grade_Settings)
+
 -It is a rewrite of tobias with a hybrid system of classes with pattern design.
 
 ## Created with love for you
