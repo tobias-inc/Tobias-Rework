@@ -25,18 +25,17 @@ module.exports = class Lyrics extends Command {
   async run({ channel, author, t, args }) {
     const embed = new TobiasEmbed(author, this.client)
 
-
+    //Lyrics Command that uses spotify presence for a better UX
     const search = args.join(' ')
-    const AUTHOR = author.presence.activities
+    const PRESCENCE = author.presence.activities //this gets the user presence
     
-    function spotify(AUTHOR){
-        if(AUTHOR[0].name === 'Spotify' && !search){
-          return true
-        }
-        return false
+    function spotify() { //This function verify if the user is using spotify and don't typed a song name
+    if(PRESCENCE[0].name === 'Spotify' && !search)return true;
+    else return false;
     }
-    const title = spotify(AUTHOR) ? AUTHOR[0].details : search.split('-')[0] 
-    const artist = spotify(AUTHOR) ? AUTHOR[0].state.split(';')[0] : search.split('-')[1] 
+
+    const title = spotify() ? PRESCENCE[0].details : search.split('-')[0] 
+    const artist = spotify() ? PRESCENCE[0].state.split(';')[0] : search.split('-')[1] 
 
     if(!title || !artist) {
       return channel.send(embed
@@ -45,7 +44,7 @@ module.exports = class Lyrics extends Command {
         .setColor(Constants.ERROR_COLOR)
       )
     }
-    if (search || AUTHOR[0].name === 'Spotify') {
+    if (search || PRESCENCE[0].name === 'Spotify') {
       const hit = await this.client.apis.geniusapi.loadLyrics(title, artist)
       const Art = await this.client.apis.geniusapi.loadArt(title, artist)
 
