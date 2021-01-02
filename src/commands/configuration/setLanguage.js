@@ -32,7 +32,10 @@ module.exports = class ConfigPrefix extends Command {
 
 			channel.send(embed)
 				.then(async (msg) => {
-					await this.client.database.guilds.get(guild.id).then(e => e.language === 'pt-BR') ? await msg.react(Emojis.US): await msg.react(Emojis.BR)
+					await msg.react(Emojis.US)
+					await msg.react(Emojis.BR)
+
+					//await this.client.database.guilds.get(guild.id).then(e => e.language === 'pt-BR')
 
 					const filter = (reaction, user) => [Emojis.BR, Emojis.US].includes(reaction.emoji.name) && user.id === author.id
 					const collector = msg.createReactionCollector(filter, { time: 10000 })

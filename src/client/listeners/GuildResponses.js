@@ -18,7 +18,7 @@ module.exports = class GuildResponses {
     
   }
 
-  async onGuildMemberRemove (member) {
+  async onGuildMemberRemove () {
     const guild = this.client.guilds.resolve('500452776770535444').members.cache.size.toString().split('')
     const contador = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     let count = ''
